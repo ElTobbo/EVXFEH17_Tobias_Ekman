@@ -1,0 +1,95 @@
+/*universella inställningar*/
+*{
+    font-family: 'Merriweather'; /*"dubblett" ligger importerat i html*/
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /*tar hänsyn till verklig storlek*/
+
+    }
+    body
+    {
+        width:100%;
+        max-width:800em;
+        margin:0 auto; /*för att centrera allt innehåll*/
+        background-color: #e9967a;
+    }
+    ul
+    {
+        list-style-type: none; /*tar bort punkter från listor*/
+    }
+    nav
+    {
+        background:#333;
+
+    }
+    nav a
+    {
+        color: white;
+    }
+    nav li 
+    {
+        display: inline; /*gör navigeringsmenyn horisontell*/
+        padding: 2em;
+    }
+    a:link 
+    {
+        text-decoration: none; /*tar bort understrykning*/
+    }
+    nav a:hover 
+    {
+        text-decoration: none;
+      color: #555; /*ändrar länkfärgen när man hoovrar över den*/
+    }
+h2+h3 /*Påverkar h3 som ligger ihop med en h2*/
+{
+    color:greenyellow
+}
+.syndicate article /*påverkar alla artiklar under klassen syndicate*/
+{
+background: slategrey;
+margin: 1em;
+padding: 0.5em;
+margin-bottom: 0.5em;
+box-shadow: 5px 5px 5px #888888; /*Pynt*/
+}
+.syndicate h3 /*Rubrikerna inom syndicate*/
+{
+    text-align: center;
+    padding: 0.5em;
+}
+.syndicate article p /*Påverkar paragrafer under klassen syndicate*/
+{
+color: whitesmoke;
+padding: 0.5em;
+margin: 0.5em;
+}
+.blog_summary
+{
+    background-color: #F85098;
+    padding: 0.5em;
+    margin: 1em;
+}
+.blog_summary li
+{
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.blog_summary a:hover{
+    color: red; 
+}
+.blog_summary > span /*child selector, hade gett samma resultat här även utan >...*/
+{
+    color: yellow;
+}
+footer{
+    text-align: center;
+    margin-top: 0.5em;
+}
+.tel ~ .web /*syskonkombinerare, .web som kommer efter .tel påverkas*/
+{
+color: white;
+}
+.contact a{
+    color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
+}
