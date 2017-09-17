@@ -4,8 +4,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box; /*tar hänsyn till verklig storlek*/
-
-    }
+}
     body
     {
         width:100%;
@@ -92,4 +91,10 @@ color: white;
 }
 .contact a{
     color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
+}
+form{
+    padding: 1em;
+}
+fieldset{
+    padding: 1em;
 }
