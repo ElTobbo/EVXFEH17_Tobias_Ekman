@@ -10,123 +10,246 @@
         width:100%;
         max-width:1200px;
         margin:0 auto; /*för att centrera allt innehåll*/
-        background-image: url("../Images/Bakgrundsbrus.jpg");
+        background-image: url("../Images/Behindbars.jpg");
         background-size: auto auto;
         background-size: cover;
         text-decoration: none;
     }
     body a{
-        text-decoration: none;
+      text-decoration: none;
     }
-    ul
-    {
-        list-style-type: none; /*tar bort punkter från listor*/
-    }
+    /*Endast för mobilen*/
+label{
+    color:#4A0044; /*Listsymbol och namn på den*/
+    line-height: 40px;
+    font-size:2em;
+    cursor:pointer;
+  }
+  
+  /*Dold checkbox som styr växling mellan olika viewportstorlekar*/
+  #nav-toggle {
+    display: none;
+  }
+  
+  /*...som används för att dölja och visa menyn på mobilen*/
+  #nav-toggle:checked + #wrapper nav {
+    display: block;
+  }
+  
+  /*Menyn döljs på mobilen som default*/
+  nav {
+  display: none;	
+  }
+  
+  nav a{
+      display:block;
+      text-decoration: none;
+      font-weight: bold;
+      font-size:10pt;
+      color:purple;
+    
+  }
+  
+  nav a:hover{
+      background:#DE9DCF;
+      color:#032FDF;
+  }
+  
+  nav ul{
+    list-style: none;
+    opacity:0.7; /*Mobilmenyns transparens*/
+    
+  }
+  
+  nav ul li{
+    background:skyblue;
+    line-height: 40px;
+    padding-left:50px;
+  }
+  
+  /*Den första undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+  nav ul li ul li a{
+    color:#D822D8;
+  }
+  
+  /*Den andra undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+  nav ul ul li ul a{
+    color:#4F414F;
+  }
+  nav ul li span /*stylar span'en i mobilläge också*/
+  {
+  font-size: 8pt;
+  border: 1px solid #a1a1a1;
+  padding: 1px 5px; 
+  background: #F5FD8D;
+  width: auto;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  }
+  
+  @media all and (min-width: 630px){
+  /*Tecknet för mobil menyn döljs på desktop*/
+    label{
+      display:none;
+    } 
+    
+    /*Menyn på desktoppen*/
     nav {
-        height:40px;
-        width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
-        display:block;
-        margin:0 auto; /*centrar ul inuiti*/
-        text-align: center;
-    }
-    
-    nav a{
-        display:block;
-        text-decoration: none;
-        font-family: merriweather;
-        font-weight: bold;
-        font-size:10pt;
-        color: black;
-    }
-    
-    nav li a:hover{
-        background:#93F0F9;
-        color: purple;
-    }
-    
+      height:40px;
+      width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
+      display:block;
+      margin:0 auto; /*centrar ul inuti*/
+  
+  }
+    /*Alla ul li centreras på desktoppen*/
     nav ul{
-        list-style: none;
-      opacity:0.8; /*Transparens*/
-    }
+      text-align:center;
+    }  
+  
+   /*Menyn på desktoppen*/
+  nav ul li{
+      float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
+      width:150px;
+      height:40px;
+    margin-right:1px;
+    padding:0;
+  }
+  
+  /*Döljer dropdown*/
+  nav ul ul li{
+      position:relative; /* sätter positionen till vara relativt till sin behållare*/
+      display:none;
+  }
+  
+  /*Döljer submenyn i dropdown*/
+  nav ul ul ul{
+      display:none;
     
-    nav ul li{
-        float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
-        width:150px;
-        height:40px;
-        line-height: 40px;
-        background:skyblue;
-      margin-right:1px;
-    }
+  }
+  
+  /*Visar dropdown vid hover på ul li*/
+  nav ul li:hover ul li{
+      display: block;
     
+  }
+  
+  /*Visar submenyn i dropdown*/
+  nav ul ul li:hover ul{
+      display:block;
+      position:absolute; /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
+      width:150px; /*samma som ul li*/
+      left:150px; /*absolute position 200px ifrån sin förälder*/
+      top:0px; /*absolute position högst mot sin förälder*/
     
-    /*Döljer dropdown*/
-    nav ul ul li{
-        position:relative; /* sätter positionen till vara relativt till sin behållare*/
-        display:none;
+  }
+    /*Färgen för undermenyer på desktoppen återställs*/
+    nav ul li ul li a{
+    color:#4E7295;
+  }
+    /*Färgen för undermenyer på desktoppen återställs*/
+    nav ul ul li ul a{
+    color:#436282;
+  }
+  body a{
+    text-decoration: none;
+}
+ul
+{
+    list-style-type: none; /*tar bort punkter från listor*/
+}
+nav {
+    height:40px;
+    width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
+    display:block;
+    margin:0 auto; /*centrar ul inuiti*/
+    text-align: center;
+}
+
+nav li a:hover{
+    background:#93F0F9;
+    color: purple;
+}
+
+nav ul{
+    list-style: none;
+  opacity:0.8; /*Transparens*/
+}
+
+/*Döljer dropdown*/
+nav ul ul li{
+    position:relative; /* sätter positionen till vara relativt till sin behållare*/
+    display:none;
+}
+
+/*Döljer submenyn i dropdown*/
+nav ul ul ul{
+    display:none;
+  
+}
+
+/*Visar dropdown vid hover på ul li*/
+nav ul li:hover ul li{
+    display: block;
+  
+}
+/*Visar submenyn i dropdown*/
+nav ul ul li:hover ul{
+    display:block;
+    position:absolute; /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
+    width:150px; /*samma som ul li*/
+    left:150px; /*absolute position 150px ifrån sin förälder*/
+    top:0px; /*absolute position högst mot sin förälder*/
+
+}/*Rundar hörn på sista typen, även vid hovering, men hur stoppar man arvet?*/
+    nav ul ul li:last-of-type, nav ul ul li:last-of-type a
+    {
+        border-bottom-right-radius:25px;
+        border-bottom-left-radius:25px;
     }
-    
-    /*Döljer submenyn i dropdown*/
-    nav ul ul ul{
-        display:none;
-      
-    }
-    
-    /*Visar dropdown vid hover på ul li*/
-    nav ul li:hover ul li{
-        display: block;
-      
-    }
-    /*Visar submenyn i dropdown*/
-    nav ul ul li:hover ul{
-        display:block;
-        position:absolute; /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
-        width:150px; /*samma som ul li*/
-        left:150px; /*absolute position 200px ifrån sin förälder*/
-        top:0px; /*absolute position högst mot sin förälder*/
-    }
-        nav ul ul li:nth-last-child(1), nav ul ul li:nth-last-child(1) a
-        {
-            border-bottom-right-radius:25px;
-            border-bottom-left-radius:25px;
-        }
 nav ul li span
 {
-    font-size: 8pt;
-    border: 1px solid #a1a1a1;
-    padding: 1px 5px; 
-    background: #F5FD8D;
-    width: auto;
-    border-radius: 8px;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+font-size: 8pt;
+border: 1px solid #a1a1a1;
+padding: 1px 5px; 
+background: #E2F110;
+width: auto;
+border-radius: 8px;
+color: white;
+text-shadow: 2px 2px 4px #000000;
 }
-   
-    /* Bortkommenterat
-    nav li:nth-of-type(even) a /*a efter () för att ändra länkad textfärg, av någon anledning!
-    {
-    color: #F35A76;
-    }
-    */
-   /*
-    nav li 
-    {
-        display: inline; /*gör navigeringsmenyn horisontell
-        padding: 2em;
-    */
-    }
-    a:link 
-    {
-        text-decoration: none; /*tar bort understrykning*/
-    }
-    nav a:hover 
-    {
-        text-decoration: none;
-      color: #555; /*ändrar länkfärgen när man hoovrar över den*/
-    }
-h2+h3 /*Påverkar h3 som ligger ihop med en h2*/
+
+/* Bortkommenterat
+nav li:nth-of-type(even) a /*a efter () för att ändra länkad textfärg, av någon anledning!
 {
-    color:greenyellow
+color: #F35A76;
 }
+*/
+/*
+nav li 
+{
+    display: inline; /*gör navigeringsmenyn horisontell
+    padding: 2em;
+*/
+/*
+}
+a:link 
+{
+    text-decoration: none; /*tar bort understrykning*/
+/*
+  }
+nav a:hover 
+{
+  text-decoration: none;
+  color: #F9F5F5; /*ändrar länkfärgen när man hoovrar över den*/
+}
+
+/*Bortplockat
+h2+h3 /*Påverkar h3 som ligger ihop med en h2
+{
+color:greenyellow
+}
+*/
 section article:nth-child(3n+2)
 {
 background-color: slateblue;
@@ -141,8 +264,8 @@ box-shadow: 5px 5px 5px #888888; /*Pynt*/
 }
 .syndicate h3 /*Rubrikerna inom syndicate*/
 {
-    text-align: center;
-    padding: 0.5em;
+text-align: center;
+padding: 0.5em;
 }
 .syndicate article p /*Påverkar paragrafer under klassen syndicate*/
 {
@@ -150,52 +273,68 @@ color: whitesmoke;
 padding: 0.5em;
 margin: 0.5em;
 }
+/*Lite hovereffekt över artikellänkar också*/
+.syndicate article a:hover{
+  color: lightseagreen;
+}
+.syndicate p:hover{
+  color: lightseagreen;
+}
 .blog_summary
 {
-    background-color: #F85098;
-    padding: 0.5em;
-    margin: 1em;
+background-color: #D56F9A;
+padding: 0.5em;
+margin: 1em;
 }
 .blog_summary li
 {
-    text-align: center;
-    margin: 0.5em;
-    padding: 0.5em;
+text-align: center;
+margin: 0.5em;
+padding: 0.5em;
 }
 .blog_summary a:hover{
-    color: red; 
+color: red; 
 }
 .blog_summary > span /*child selector, hade gett samma resultat här även utan >...*/
 {
-    color: yellow;
+color: yellow;
 }
 footer{
-    text-align: center;
-    margin-top: 0.5em;
+text-align: center;
+margin-top: 0.5em;
+}
+.next{
+  margin: 1em;
+}
+.next a{
+  color: black;
+}
+.next a:hover{
+  color: white;
 }
 .tel ~ .web /*syskonkombinerare, .web som kommer efter .tel påverkas*/
 {
 color: white;
 }
 .contact a{
-    color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
+color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
 }
 form{
-    padding: 1em;
-    margin: 1em;
+padding: 1em;
+margin: 1em;
 }
 fieldset{
-    padding: 1em;
+padding: 1em;
 }
 input[type=checkbox] 
 {
-    margin: 2em;
+margin: 2em;
 }
 select 
 {
-    margin: 1em;
+margin: 1em;
 }
 textarea
 {
-    margin: 1em;
+margin: 1em;
 }
