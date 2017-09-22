@@ -8,7 +8,7 @@
     body
     {
         width:100%;
-        max-width:800em;
+        max-width:800px;
         margin:0 auto; /*för att centrera allt innehåll*/
         background-color: #e9967a;
     }
@@ -16,11 +16,24 @@
     {
         list-style-type: none; /*tar bort punkter från listor*/
     }
+    nav {
+        height:40px;
+        width:755px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 5 li*150px+margin-right på 1px*/ 
+        display:block;
+        margin:0 auto; /*centrar ul inuiti*/
+        text-align: center;
+    }
     nav
     {
         background:#333;
 
     }
+    /* Bortkommenterat
+    nav li:nth-of-type(even) a /*a efter () för att ändra länkad textfärg, av någon anledning!
+    {
+    color: #F35A76;
+    }
+    */
     nav a
     {
         color: white;
@@ -29,6 +42,7 @@
     {
         display: inline; /*gör navigeringsmenyn horisontell*/
         padding: 2em;
+    
     }
     a:link 
     {
@@ -42,6 +56,10 @@
 h2+h3 /*Påverkar h3 som ligger ihop med en h2*/
 {
     color:greenyellow
+}
+section article:nth-child(3n+2)
+{
+background-color: slateblue;
 }
 .syndicate article /*påverkar alla artiklar under klassen syndicate*/
 {
@@ -94,7 +112,20 @@ color: white;
 }
 form{
     padding: 1em;
+    margin: 1em;
 }
 fieldset{
     padding: 1em;
+}
+input[type=checkbox] 
+{
+    margin: 2em;
+}
+select 
+{
+    margin: 1em;
+}
+textarea
+{
+    margin: 1em;
 }
