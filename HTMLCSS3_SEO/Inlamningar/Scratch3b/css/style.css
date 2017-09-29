@@ -10,10 +10,11 @@
         width:100%;
         max-width:1200px;
         margin:0 auto; /*för att centrera allt innehåll*/
-        background-image: url("../Images/Behindbars.jpg");
-        background-size: auto auto;
+        background-color: darkorchid;
+        /*background-image: url("../Images/Behindbars.jpg");*/
+        /*background-size: auto auto;
         background-size: cover;
-        text-decoration: none;
+        text-decoration: none;*/
     }
     body a{
       text-decoration: none;
@@ -56,6 +57,9 @@ label{
   }
   
   nav ul{
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
     list-style: none;
     opacity:0.7; /*Mobilmenyns transparens*/
     
@@ -87,17 +91,75 @@ label{
   color: white;
   text-shadow: 2px 2px 4px #000000;
   }
-  
-  @media all and (min-width: 630px){
+  .syndicate{
+      display: flex;
+      flex-direction: column;
+  }
+  .syndicate article /*påverkar alla artiklar under klassen syndicate*/
+  {
+display: flex;  
+background: slategrey;
+  max-width: 100%;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 5%;
+   /*Pynt*/
+  }
+  .syndicate img{
+      width: 100%;
+  }
+  .syndicate article:nth-child(2)
+  {
+  background-color: slateblue;
+  }
+  section article:last-child{
+  background-color: goldenrod;
+  }
+  .titel{
+      font-size: 120%;
+      font-weight: 700;
+      margin: 0.5em;
+  }
+  .sprid{
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5em;
+  }
+.knapp{
+    background-color: turquoise;
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em;
+    }
+    .next{
+        margin: 1em;
+      } 
+      .contact{
+        text-align: center;
+      }     
+      .tel ~ .web /*syskonkombinerare, .web som kommer efter .tel påverkas*/
+      {
+        color: white;
+      }
+      .contact a{
+      color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
+      }
+      
+  @media all and (min-width: 816px){
   /*Tecknet för mobil menyn döljs på desktop*/
     label{
       display:none;
     } 
-    
+    .syndicate{
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: center;
+        margin-top: 2em;
+    }   
     /*Menyn på desktoppen*/
     nav {
       height:40px;
-      width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
+      width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de  li*150px+margin-right på 1px*/ 
       display:block;
       margin:0 auto; /*centrar ul inuti*/
   
@@ -105,11 +167,12 @@ label{
     /*Alla ul li centreras på desktoppen*/
     nav ul{
       text-align:center;
+      flex-flow: row wrap;
     }  
   
    /*Menyn på desktoppen*/
   nav ul li{
-      float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
+      /*float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
       width:150px;
       height:40px;
     margin-right:1px;
@@ -218,55 +281,6 @@ border-radius: 8px;
 color: white;
 text-shadow: 2px 2px 4px #000000;
 }
-
-/* Bortkommenterat
-nav li:nth-of-type(even) a /*a efter () för att ändra länkad textfärg, av någon anledning!
-{
-color: #F35A76;
-}
-*/
-/*
-nav li 
-{
-    display: inline; /*gör navigeringsmenyn horisontell
-    padding: 2em;
-*/
-/*
-}
-a:link 
-{
-    text-decoration: none; /*tar bort understrykning*/
-/*
-  }
-nav a:hover 
-{
-  text-decoration: none;
-  color: #F9F5F5; /*ändrar länkfärgen när man hoovrar över den*/
-}
-
-/*Bortplockat
-h2+h3 /*Påverkar h3 som ligger ihop med en h2
-{
-color:greenyellow
-}
-*/
-section article:nth-child(3n+2)
-{
-background-color: slateblue;
-}
-.syndicate article /*påverkar alla artiklar under klassen syndicate*/
-{
-background: slategrey;
-margin: 1em;
-padding: 0.5em;
-margin-bottom: 0.5em;
-box-shadow: 5px 5px 5px #888888; /*Pynt*/
-}
-.syndicate h3 /*Rubrikerna inom syndicate*/
-{
-text-align: center;
-padding: 0.5em;
-}
 .syndicate article p /*Påverkar paragrafer under klassen syndicate*/
 {
 color: whitesmoke;
@@ -299,42 +313,10 @@ color: red;
 {
 color: yellow;
 }
-footer{
-text-align: center;
-margin-top: 0.5em;
+.syndicate article{
+    max-width: 45%;
+    margin-right: 0;
 }
-.next{
-  margin: 1em;
-}
-.next a{
-  color: black;
-}
-.next a:hover{
-  color: white;
-}
-.tel ~ .web /*syskonkombinerare, .web som kommer efter .tel påverkas*/
-{
-color: white;
-}
-.contact a{
-color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
-}
-form{
-padding: 1em;
-margin: 1em;
-}
-fieldset{
-padding: 1em;
-}
-input[type=checkbox] 
-{
-margin: 2em;
-}
-select 
-{
-margin: 1em;
-}
-textarea
-{
-margin: 1em;
+.syndicate article:last-child{
+max-width: 90%;
 }

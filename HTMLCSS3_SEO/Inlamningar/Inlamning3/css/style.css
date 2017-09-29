@@ -10,7 +10,7 @@
         width:100%;
         max-width:1200px;
         margin:0 auto; /*för att centrera allt innehåll*/
-        background-image: url("../Images/Behindbars.jpg");
+        /*background-image: url("../Images/Behindbars.jpg");*/
         background-size: auto auto;
         background-size: cover;
         text-decoration: none;

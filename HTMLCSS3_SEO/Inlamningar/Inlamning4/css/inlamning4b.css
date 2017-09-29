@@ -175,8 +175,7 @@ background: slategrey;
       
       .sida{
           background-color: slategrey;
-          padding-top: 1em;
-          padding: 0.5;
+          padding: 1em;
       }
       .sida p{
           padding-top: 1em;
@@ -194,7 +193,10 @@ background: slategrey;
       
   @media all and (min-width: 816px){
   /*Tecknet för mobil menyn döljs på desktop*/
-   
+   .flex{
+       display:flex;
+       flex-flow:row;
+   }
     .syndicate{
         flex-direction: row;
         flex-flow: wrap;
@@ -205,13 +207,8 @@ background: slategrey;
         align-items:flex-end;
         justify-content: flex-end;
     }
-    .sida{
-        display: flex;
-        flex-direction: column;
-        order:0;
-    }
     /*Menyn på desktoppen*/
-    .meny:first-child{
+    #skicka{
         order:5;
     }
       /*height:40px;
@@ -278,4 +275,9 @@ margin: 0.5em;
 .syndicate article:last-child{
 max-width: 100%;
 }
+.sida{
+    display: flex;
+    flex-direction: column;
+    order:-1;
 }
+  }
