@@ -41,35 +41,45 @@
       flex-direction: column;
       justify-content: flex-end;
       align-content: flex-end;
-      
+      border-bottom-style: solid;
+      border-bottom-color: black; 
   }
 .logo{
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    
+    justify-content: center;
+    }
+.logo h1, h2{
+    color: black;
 }
+
 .logo i, h1, h2{
     padding-right:1em;
 }
     .logo i{
         font-size: 2.5em;
     }
-}
+    .fa-youtube{
+        color: red;
+    }
+    .fa-facebook-official{
+        color:#98DDDA;
+    }
+    .fa-instagram{
+        color: #AC2020;
+    }
+    .fa-twitter{
+        color: blue;
+    }
   nav a{
-      display:block;
       text-decoration: none;
       font-weight: bold;
       font-size:10pt;
-      color:purple;
+      color: white;
     
   }
-  
-  nav a:hover{
-      background:#DE9DCF;
-      color:#032FDF;
-  }
-  
+
   nav ul{
       display: flex;
       justify-content: center;
@@ -80,14 +90,43 @@
   }
   
   nav ul li{
-    background:skyblue;
     line-height: 40px;
-    padding-left:40px;
+    padding-left:30px; 
   }
-  
+#skicka{
+    background-color: orangered;
+}
+#ett{
+    background-color: #026942;
+}
+#två{
+   background-color:#025555;
+}
+#tre{
+    background-color: #CE4AC9;
+}
+#fyra{
+    background-color:#023030;
+}
+#fem{
+    background-color:#D6B005;
+}
  .syndicate{
       display: flex;
       flex-direction: column;
+      border-bottom-style: solid;
+      border-bottom-color: black;            
+  }
+  .stuff p{ 
+    margin-right: 4em;
+  }
+  .stuffh{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+  }
+  .stuff{
+      padding:0.5em;
   }
   .syndicate article /*påverkar alla artiklar under klassen syndicate*/
   {
@@ -126,21 +165,31 @@ background: slategrey;
     margin-top: auto;
     }
     .next{
-        margin: 1em;
-      } 
-      .contact{
-        text-align: center;
-      }     
-      .tel ~ .web /*syskonkombinerare, .web som kommer efter .tel påverkas*/
-      {
-        color: white;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+    }
+    .next a{
+        color: black;
       }
-      .contact a{
-      color: white; /*För att få weblänken vit också, trots att den är "skarp"*/
-      }
+      
       .sida{
-          color:white;
           background-color: slategrey;
+          padding-top: 1em;
+          padding: 0.5;
+      }
+      .sida p{
+          padding-top: 1em;
+      }
+      .sida a{
+          color: white;
+      }
+      .legal{
+        text-align: center;
+        padding: 0.5em;
+      }
+      .legal a{  
+        color: black;
       }
       
   @media all and (min-width: 816px){
@@ -155,15 +204,21 @@ background: slategrey;
     .top{
         align-items:flex-end;
         justify-content: flex-end;
-    } 
+    }
+    .sida{
+        display: flex;
+        flex-direction: column;
+        order:0;
+    }
     /*Menyn på desktoppen*/
-    nav {
+    .meny:first-child{
+        order:5;
+    }
       /*height:40px;
       width:1005px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de  li*150px+margin-right på 1px*/ 
      /* display:block;
       margin:0 auto; /*centrar ul inuti*/
-  
-  }
+
     /*Alla ul li centreras på desktoppen*/
     nav ul{
       text-align:center;
@@ -175,7 +230,6 @@ background: slategrey;
      /* width:150px;*/
       height:40px;
     padding-right:1em;
-    margin-bottom: 0.5em
   }
   body a{
     text-decoration: none;
@@ -186,18 +240,18 @@ ul
 }
 
 nav li a:hover{
-    background:#93F0F9;
-    color: purple;
+   background-attachment: opacity 0,8;
+    color: #674099;
 }
 
 nav ul{
     list-style: none;
-  opacity:0.8; /*Transparens*/
+  
   flex-direction: row;
 }
 
 /*Rundar hörn på li*/
-    nav li
+    nav li, nav li a:hover
     {
         border-top-right-radius:25px;
         border-top-left-radius:25px;
