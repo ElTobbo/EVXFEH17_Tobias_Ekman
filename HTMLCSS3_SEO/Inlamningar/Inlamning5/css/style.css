@@ -263,5 +263,7 @@ CSS Grid layout for wider screens, when browser supports grid:
             width: 100%;
             max-width: 1000px;
         }
-
+        .card{
+            margin: 0;
+        }
 	}
