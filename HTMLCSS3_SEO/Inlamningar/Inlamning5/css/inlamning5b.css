@@ -93,17 +93,19 @@ label{
   nav ul ul li ul a{
     color:#4F414F;
   }
-  .sajt h3{
+  /*Styling på rubrikerna*/
+  .sajt h3{ 
         color: black;
         border-top-style: solid;
         border-top-color: black;
         padding-top: 1em;
+        padding-bottom: 0.5em;
   }
   footer{
       padding: 1em;
   }
 
-  footer h3 p a{
+  .tags h3, p{
       color: black;
   }
   .icons{
@@ -114,15 +116,32 @@ label{
   .icons i{
       padding: 0.5em;
   }
+
+  .fa-thumbs-up{
+      color: blue;
+  }
+  .fa-share-square-o{
+      color: green;
+  }
+  .fa-pinterest-square{
+      color: darkred;
+  }
+  .fa-twitter-square{
+      color: #0099FF;
+  }
   @supports (grid-area: auto) {
 
   @media all and (min-width: 600px){
       .sajt{
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 1em; 
+          grid-gap: 1em;
+          grid-auto-flow: dense; /*Försöker packa ihop tätare...*/
       }
       
+      .seven{
+          grid-column: 2/3; /*Hjälp med att hamna i rätt kolumn iaf...*/
+      }
   }
   
   @media all and (min-width: 960px){
@@ -183,7 +202,6 @@ label{
   /*Visar dropdown vid hover på ul li*/
   nav ul li:hover ul li{
       display: block;
-    
   }
   
   /*Visar submenyn i dropdown*/
@@ -220,6 +238,7 @@ nav {
 nav li a:hover{
     background:#E4E1E1;
     color: #353435;
+    border-radius: 60%;
 }
 
 nav ul{
@@ -256,7 +275,7 @@ nav ul ul li:hover ul{
 .sajt{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 1em;
     grid-auto-flow: dense;
 }
@@ -304,4 +323,3 @@ footer{
 }
 
   }
-}
