@@ -1,15 +1,28 @@
-@mixin grid($grid-type, $args, $row-gap, $column-gap: $row-gap) {
-    @supports (display: grid) {
-      display: grid;
-      #{$grid-type}: #{$args};
-      grid-gap: rem($row-gap) rem($column-gap);
+/*--------------------------------------------------------------
+Kod för brytpunkter
+------------------------------------------------*/
+
+$breakpoints: (
+    "mobil": (min-width: 30em),
+    "platta": (min-width: 45em),
+    "pc": (min-width: 60em),
+    "wide": (min-width: 75em)
+  )
+  !default;
+  
+  @mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
     }
   }
-  @include grid('grid-template-columns', 'repeat(3, auto)', 10px, 15px);
   
-  Resultat:
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: rem(10px) rem(15px);
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately,
+      no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
+  }
+  

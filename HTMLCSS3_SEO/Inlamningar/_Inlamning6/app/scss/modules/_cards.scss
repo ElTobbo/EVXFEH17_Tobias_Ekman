@@ -1,0 +1,31 @@
+.syndicate article /*påverkar alla artiklar under klassen syndicate*/
+{
+display: flex;  
+background: rgb(70, 93, 114);
+max-width: 100%;
+flex-direction: column;
+margin: 0;
+margin-bottom: 5%;
+ /*Pynt*/
+}
+.syndicate img{
+    width: 100%;
+}
+.titel{
+    font-size: 120%;
+    font-weight: 700;
+    text-align: center;
+}
+.sprid{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em;
+    font-size: 1em;
+}
+.knapp{
+  background-color: turquoise;
+  font-size: 1em;
+  text-align: center;
+  margin: 0.5em;
+  margin-top: auto;
+  }

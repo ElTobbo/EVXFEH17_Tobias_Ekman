@@ -87,7 +87,7 @@
   }
   
   /*på desktopen visa inte mobil label*/
-  @include respond-to("small") {
+  @include respond-to("mobil") {
     #nav label.menu {
       display: none;
     }
@@ -212,17 +212,4 @@
     .flex-form li button {
       width: 55%;
     }
-  }
-  .syndicate article /*påverkar alla artiklar under klassen syndicate*/
-  {
-display: flex;  
-background: slategrey;
-  max-width: 100%;
-  flex-direction: column;
-  margin: 0;
-  margin-bottom: 5%;
-   /*Pynt*/
-  }
-  .syndicate img{
-      width: 100%;
   }
