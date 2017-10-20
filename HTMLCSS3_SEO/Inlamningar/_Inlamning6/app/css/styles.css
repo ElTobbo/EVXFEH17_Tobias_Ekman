@@ -2,8 +2,6 @@
 /*--------------------------------------------------------------
 Kod för brytpunkter
 ------------------------------------------------*/
-/*sass map för breakpoints*/
-/*sass breakpoint mixin som använder sass maps ovan*/
 /*font-icon*/
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -447,6 +445,7 @@ h2 {
   line-height: 2em;
   color: #bfe1fb; }
 
+ß
 #nav label.menu:after {
   position: absolute;
   /*absolut till label*/
@@ -507,7 +506,7 @@ h2 {
   width: 100%; }
 
 /*på desktopen visa inte mobil label*/
-@media (min-width: 30em) {
+@media (min-width: 31em) {
   #nav label.menu {
     display: none; }
   #nav {
@@ -625,3 +624,47 @@ h2 {
   text-align: center;
   margin: 0.5em;
   margin-top: auto; }
+
+@supports (grid-area: auto) {
+  @media (min-width: 45em) {
+    /*kod för platta börjar här*/
+    .syndicate {
+      margin: 0 auto;
+      padding: 1em; }
+    .syndicate {
+      display: grid;
+      grid-template-columns: 25em 25em;
+      grid-gap: 1em;
+      justify-content: center; } }
+  @media (min-width: 60em) {
+    /*kod för desktop börjar här*/
+    body {
+      background-image: url("http://cdn.wallpapersafari.com/85/64/tEKf4H.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%; }
+    /*varje artikel får ett grid-area-namn */
+    #ett {
+      grid-area: ett; }
+    #två {
+      grid-area: två; }
+    #tre {
+      grid-area: tre; }
+    #fyra {
+      grid-area: fyra; }
+    #fem {
+      grid-area: fem; }
+    #sex {
+      grid-area: sex; }
+    #sju {
+      grid-area: sju; }
+    #åtta {
+      grid-area: åtta; }
+    #nio {
+      grid-area: nio; }
+    #tio {
+      grid-area: tio; }
+    .syndicate {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "ett ... ... två" "... tre fyra ..." "fem ... ... sex" "sju åtta nio tio"; } } }

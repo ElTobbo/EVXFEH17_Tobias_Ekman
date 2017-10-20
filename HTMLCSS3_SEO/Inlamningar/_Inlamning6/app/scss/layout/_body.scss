@@ -1,0 +1,51 @@
+@supports (grid-area: auto) {
+    
+    @include respond-to('platta') { /*kod för platta börjar här*/
+        
+            
+            .syndicate {
+                margin: 0 auto;
+                padding: 1em;
+            }
+            
+            .syndicate{
+                display: grid;
+                grid-template-columns: 25em 25em;
+                grid-gap: 1em;
+                justify-content: center;
+            }    
+        }
+       
+    @include respond-to('pc') { /*kod för desktop börjar här*/ 
+            body{
+                background-image:url("http://cdn.wallpapersafari.com/85/64/tEKf4H.jpg");
+                background-repeat: no-repeat;
+                background-size:100%;
+            }
+        
+            /*varje artikel får ett grid-area-namn */
+            #ett {grid-area: ett;} 
+            #två {grid-area: två;}
+            #tre {grid-area: tre;}
+            #fyra {grid-area: fyra;}
+            #fem {grid-area: fem;}
+            #sex {grid-area: sex;}
+            #sju {grid-area: sju;}
+            #åtta {grid-area: åtta;}
+            #nio {grid-area: nio;}
+            #tio {grid-area: tio;}
+            
+
+            .syndicate{
+            display: grid;    
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "ett ... ... två"
+            "... tre fyra ..."
+            "fem ... ... sex"
+            "sju åtta nio tio";
+            }
+
+        }       
+    }

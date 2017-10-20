@@ -1,12 +1,12 @@
 /// UTILITIES:
 /// generar inte css
 /// "initierar" projektet
-@import 'utilities/utilities_index';
+@import "utilities/utilities_index";
 // BASE:
 // övergripande, normalizer, typsnitt
-@import 'base/base_index';
+@import "base/base_index";
 //MODULES
 //enskilda komponenter
-@import 'modules/modules_index';
+@import "modules/modules_index";
 //generell layout
-@import 'layout/layout_index';
+@import "layout/layout_index";
