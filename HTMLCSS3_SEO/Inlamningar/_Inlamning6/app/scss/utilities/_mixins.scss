@@ -1,14 +1,4 @@
-/*--------------------------------------------------------------
-Kod för brytpunkter
-------------------------------------------------*/
 
-$breakpoints: (
-    "mobil": (min-width: 31em),
-    "platta": (min-width: 45em),
-    "pc": (min-width: 60em),
-    "wide": (min-width: 75em)
-  )
-  !default;
   
   @mixin respond-to($breakpoint) {
   // If the key exists in the map

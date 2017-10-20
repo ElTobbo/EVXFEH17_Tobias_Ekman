@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/*--------------------------------------------------------------
-Kod för brytpunkter
-------------------------------------------------*/
 /*font-icon*/
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -506,7 +503,7 @@ h2 {
   width: 100%; }
 
 /*på desktopen visa inte mobil label*/
-@media (min-width: 31em) {
+@media (min-width: 40em) {
   #nav label.menu {
     display: none; }
   #nav {
@@ -626,7 +623,7 @@ h2 {
   margin-top: auto; }
 
 @supports (grid-area: auto) {
-  @media (min-width: 45em) {
+  @media (min-width: 48em) {
     /*kod för platta börjar här*/
     .syndicate {
       margin: 0 auto;
