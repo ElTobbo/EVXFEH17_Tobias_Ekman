@@ -1,0 +1,21 @@
+.credits{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #916c55;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.author{
+    color: whitesmoke;
+}
+
+.contact{
+    @extend .author;
+    font-style: italic;
+}
+
+.phone{
+    @extend .author;
+    font-weight: 150;
+}

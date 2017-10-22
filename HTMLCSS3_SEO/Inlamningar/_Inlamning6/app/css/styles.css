@@ -442,8 +442,7 @@ h2 {
   line-height: 2em;
   color: #bfe1fb; }
 
-ß
-#nav label.menu:after {
+ß #nav label.menu:after {
   position: absolute;
   /*absolut till label*/
   right: 1em;
@@ -594,7 +593,7 @@ h2 {
 
 .syndicate article {
   display: flex;
-  background: #465d72;
+  background: #7b94aa;
   max-width: 100%;
   flex-direction: column;
   margin: 0;
@@ -621,6 +620,22 @@ h2 {
   text-align: center;
   margin: 0.5em;
   margin-top: auto; }
+
+.credits {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #916c55;
+  justify-content: space-between;
+  padding: 2rem; }
+
+.author, .contact, .phone {
+  color: whitesmoke; }
+
+.contact {
+  font-style: italic; }
+
+.phone {
+  font-weight: 150; }
 
 @supports (grid-area: auto) {
   @media (min-width: 48em) {
@@ -664,4 +679,15 @@ h2 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: auto;
-      grid-template-areas: "ett ... ... två" "... tre fyra ..." "fem ... ... sex" "sju åtta nio tio"; } } }
+      grid-template-areas: "ett ... ... två" "... tre fyra ..." "fem ... ... sex" "sju åtta nio tio"; }
+    .author, .contact, .phone {
+      background-color: #b87a28;
+      padding: 0.5rem;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px; }
+    .contact {
+      background-color: #dd9230; }
+    .phone {
+      background-color: #ffab38; } } }
