@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mig-25/evxfeh17_html_tenta.git"
+    "url": "git+https://github.com/ElTobbo/EVXFEH17_Tobias_Ekman/tree/master/HTMLCSS3_SEO/evxfeh17_html_tenta"
   },
   "keywords": [
     "tenta",
     "html",
     "css"
   ],
-  "author": "Sohail Hasware <saab.viggen@live.se>",
+  "author": "Tobias Ekman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mig-25/evxfeh17_html_tenta/issues"
+    "url": "https://github.com/ElTobbo/EVXFEH17_Tobias_Ekman/tree/master/HTMLCSS3_SEO/evxfeh17_html_tenta/issues"
   },
-  "homepage": "https://github.com/mig-25/evxfeh17_html_tenta#readme",
+  "homepage": "https://github.com/ElTobbo/EVXFEH17_Tobias_Ekman/tree/master/HTMLCSS3_SEO/evxfeh17_html_tenta#readme",
   "dependencies": {
     "browser-sync": "2.18.13",
     "del": "3.0.0",
