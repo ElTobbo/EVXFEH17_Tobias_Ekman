@@ -1,0 +1,8 @@
+footer{
+    height: 10em;
+    margin-bottom: 0;
+    background-color: map-get($color, dark);
+    color: map-get($color, accent1);
+    line-height: 10em;
+}
+

@@ -1,64 +1,76 @@
-/*nav styles*/
-#nav{
-    background: map-get($color , dark);
-  }
-  
-#nav ul{
-  list-style: none;
+header {
+  background-color: map-get($color, dark); /*using color variables from colors map*/
+  display:flex;
+  flex-direction: column;
+}
+nav {
+  background-color:$nav;
+}
+header h1 {
+  color: map-get($color, accent1);
+  text-align: center;
+  margin-top: 80px;
+}
+nav ul {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
-
-#nav a{
+nav a {
   color: map-get($color, bright);
+  font-size:25px;
 }
 
-#nav a:hover{
-  text-decoration: map-get($color, accent);
+/*Navigation xsmall*/
+@include respond-to("xsmall") { /*using my own breakingpoint variable from breakingpoints map*/
+#nav { /*creating off-canvas menu*/
+  transition: transform .3s ease-in-out;
+  top: 0;
+  bottom: 0;   
+  min-height: 100vh; /*overrides Safari bug*/
+  position: fixed; /*makes it possible to scroll behind the nav*/
+  width: 300px;
+  left: -340px;
+  max-width: 60em;
+  padding-top: 1.5em;
+  z-index: 999; /*places the navigation at the front*/
 }
-@include respond-to("xs") {
-  /*navigering för mobil*/
-  #nav{
-    transition: transform .3s ease-in-out;
-      top: 0;
-      bottom: 0;   
-      min-height: 100vh; /* override Safari bug */
-      position: fixed; /* or choose `absolute` depending on desired behavior*/
-      width: 300px;
-      left: -340px; /*lägg menyn utanför skärmen -340px*/
-  }
-  
-  /*URL-adresser med en # följd av en ankare med namnlänk till ett visst element i ett dokument. Elementet som är länkas till är själva målelementet.
-  */
-    #nav:target {     
-      transform: translateX(340px);
-    }
-  
-    .close {
-      text-align: right;
-      display: block;
-      text-decoration: none;
-      font-size: 3em;
-      position: relative;
-      top: -30px;
-    }    
+#nav:target {     
+  transform: translateX(340px);
 }
-/*desktopnavigation*/
-
-@include respond-to("small") {
-  
-  /*display menu with flex*/
-  #nav ul{
-    display:flex;
-    justify-content:center;
-  }
-  
-  #nav ul li{
-    padding: 0 20px 0 0;
-  }
-  
-  .toggle{
-    display:none;
-  }
+.toggle {
+  color: map-get($color, bright); /*styling bars icon*/
+  font-size:25px;
+}
+.close {
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  font-size: 3em;
+  position: relative;
+  top: -30px;
+}    
 }
 
+/*Navigation Desktop & Tablet*/
+@include respond-to("small") { /*using breakpoint variables from breakpoints map*/
+.toggle {
+  display: none; /*hides bars icon on desktop & tablet*/
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  padding: 0 20px 0 0;
+}
+nav {
+  background-color: map-get($color, dark); /*nav color is changed on desktop & tablet*/
+}
+nav a {
+  font-size: 30px; /*nav font-size is changed on desktop & tablet*/
+}
+nav a:hover { /*creates red hover effect on desktop & tablet*/
+  color: map-get($color, accent2);
+}
+}

@@ -1,16 +1,16 @@
 .credits{
     display: flex;
     flex-flow: row wrap;
-    background-color: #916c55;
+    background-color: map-get($colors , base);
     justify-content: space-between;
     padding: 2rem;
 }
 
-.author{
+#author1{
     color: whitesmoke;
 }
 
-.contact{
+#author2{
     @extend .author;
     font-style: italic;
 }

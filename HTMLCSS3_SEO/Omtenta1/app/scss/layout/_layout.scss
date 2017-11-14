@@ -1,0 +1,24 @@
+
+  @supports (grid-area: auto) {
+    @include respond-to("large"){
+      /*kompoeterma tilldelas grid-namn*/
+      header {grid-area: head;}
+      .hero {grid-area: hero;}
+      .main {grid-area: main;}
+      footer {grid-area: footer;}
+
+    body{
+      display:grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-gap: 1rem;
+      grid-template-areas: 
+      "head head head head"
+      "hero hero hero hero"
+      "main main main main"
+      "footer footer footer footer"
+    }
+  
+  }
+
+  }

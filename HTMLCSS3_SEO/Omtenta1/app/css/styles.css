@@ -430,35 +430,31 @@ header h1 {
   padding-top: 5rem;
   text-align: center; }
 
-nav {
+/*nav styles*/
+#nav {
   background: #282828; }
 
-nav ul {
+#nav ul {
   list-style: none;
-  margin: 5px;
-  padding: 5px; }
+  margin: 0;
+  padding: 0; }
 
-nav a {
+#nav a {
   color: #f5f5f5; }
 
-nav a:hover {
-  text-decoration: none; }
-
-/*desktop grid layout*/
-@media only screen and (max-width: 59em) {
-  /*off-canvas menu*/
+@media (min-width: 40em) {
+  /*navigering för mobil*/
   #nav {
     transition: transform .3s ease-in-out;
     top: 0;
     bottom: 0;
-    max-width: 60em;
+    min-height: 100vh;
+    /* override Safari bug */
     position: fixed;
-    /* gör så att innehållet kan scrolla bakom*/
+    /* or choose `absolute` depending on desired behavior*/
     width: 300px;
     left: -340px;
-    /*lägg menyn utanför skärmen -340px*/
-    z-index: 999;
-    /*gör så att menyn lägger sig framför allt*/ }
+    /*lägg menyn utanför skärmen -340px*/ }
   /*URL-adresser med en # följd av en ankare med namnlänk till ett visst element i ett dokument. Elementet som är länkas till är själva målelementet.
   */
   #nav:target {
@@ -471,15 +467,13 @@ nav a:hover {
     position: relative;
     top: -30px; } }
 
-@media (min-width: 40em) {
-  nav {
-    grid-area: head;
-    width: 100%; }
+/*desktopnavigation*/
+@media (min-width: 60em) {
   /*display menu with flex*/
-  nav ul {
+  #nav ul {
     display: flex;
     justify-content: center; }
-  nav ul li {
+  #nav ul li {
     padding: 0 20px 0 0; }
   .toggle {
     display: none; } }
@@ -553,7 +547,7 @@ footer {
     box-shadow: 10px 10px 5px #666; }
 
 @supports (grid-area: auto) {
-  @media (min-width: 62em) {
+  @media (min-width: 60em) {
     .main-content {
       height: 100%;
       display: grid;
@@ -587,7 +581,7 @@ footer {
       grid-column-end: span 2; } } }
 
 @supports (grid-area: auto) {
-  @media (min-width: 62em) {
+  @media (min-width: 60em) {
     /*kompoeterma tilldelas grid-namn*/
     header {
       grid-area: head; }
@@ -605,7 +599,7 @@ footer {
       grid-template-areas: "head head head head" "hero hero hero hero" "main main main main" "footer footer footer footer"; } } }
 
 @supports (grid-area: auto) {
-  @media (min-width: 62em) {
+  @media (min-width: 60em) {
     .cards {
       grid-area: card; }
     .main-content {
