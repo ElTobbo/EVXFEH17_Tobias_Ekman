@@ -16,7 +16,7 @@
 #nav a:hover{
   text-decoration: map-get($color, accent);
 }
-@include respond-to("small") {
+@include respond-to("xs") {
   /*navigering för mobil*/
   #nav{
     transition: transform .3s ease-in-out;
@@ -45,7 +45,7 @@
 }
 /*desktopnavigation*/
 
-@include respond-to("large") {
+@include respond-to("small") {
   
   /*display menu with flex*/
   #nav ul{
