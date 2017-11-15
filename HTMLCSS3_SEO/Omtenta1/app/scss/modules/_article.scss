@@ -1,0 +1,20 @@
+.article-header{
+    text-align: center;
+}
+.article-header h1{
+    display: inline;
+}
+
+.article-body{
+    padding: 5px;
+}
+
+.article-body h4{
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.article-body a{
+    color: map-get($color, black);
+    text-align: center;
+}

@@ -6,16 +6,6 @@ a:link {
     background-color: map-get($color, main);
 }
 
-ul{
-    list-style: none;
-}
-
-ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-  }
-
 .top{
     text-align: center;
     color: map-get($color, bright);
@@ -34,42 +24,3 @@ ul {
 .holiday h2{
     border-top: 2px solid grey;
     border-bottom: 2px solid grey;
-}
-.article-header{
-    text-align: center;
-}
-.article-header h1{
-    display: inline;
-}
-
-.article-body{
-    padding: 5px;
-}
-
-.article-body h4{
-    border: 2px solid black;
-    padding: 30px;
-}
-
-.article-body a{
-    color: map-get($color, black);
-    text-align: center;
-}
-
-.community{
-    text-align: center;
-    padding: 5px;
-}
-
-.community h3{
-    margin: 2px;
-}
-
-.images{
-    margin-top: 20px;
-}
-
-.images img{
-    width: 49%;
-    height: auto;
-}

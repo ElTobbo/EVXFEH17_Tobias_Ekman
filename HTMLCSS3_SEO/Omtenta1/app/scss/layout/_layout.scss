@@ -1,24 +1,31 @@
 
   @supports (grid-area: auto) {
-    @include respond-to("large"){
+    @include respond-to("medium"){
       /*kompoeterma tilldelas grid-namn*/
-      header {grid-area: head;}
-      .hero {grid-area: hero;}
-      .main {grid-area: main;}
-      footer {grid-area: footer;}
+      .holiday {grid-area: hd;}
+      .article-header {grid-area: ah;}
+      .article-body {grid-area: ab;}
+      .bg-block {grid-area: bb;}
+      .community {grid-area: cm;}
+      .footer {grid-area: ft;}
 
-    body{
+    .grid{
       display:grid;
       grid-template-columns: auto;
       grid-template-rows: auto;
       grid-gap: 1rem;
       grid-template-areas: 
-      "head head head head"
-      "hero hero hero hero"
-      "main main main main"
-      "footer footer footer footer"
+      "hd hd hd hd hd"
+      "ah ah ab ab ab"
+      "bb bb bb bb bb"
+      "cm cm cm cm cm"
+      "ft ft ft ft ft"
     }
-  
+ 
+
+
+
+
   }
 
   }

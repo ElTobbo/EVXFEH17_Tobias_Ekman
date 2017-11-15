@@ -1,0 +1,30 @@
+}
+
+.community{
+    text-align: center;
+    padding: 5px;
+}
+
+.community h3{
+    margin: 2px;
+}
+
+.images{
+    margin-top: 20px;
+}
+
+.images img{
+    width: 20%;
+    height: auto;
+}
+
+@supports (grid-area: auto) {
+    @include respond-to("medium"){
+
+        .images img{
+            width: 20%;
+            height: auto;
+        }   
+
+    }
+}
