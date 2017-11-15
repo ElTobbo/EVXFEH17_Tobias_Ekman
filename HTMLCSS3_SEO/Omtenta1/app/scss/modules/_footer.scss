@@ -1,8 +1,14 @@
 footer{
-    height: 10em;
-    margin-bottom: 0;
-    background-color: map-get($color, dark);
-    color: map-get($color, accent1);
-    line-height: 10em;
+    padding: 20px;
+    background-color: map-get($color, grey);
+    color: map-get($color, black);
+    margin: 5px;
 }
 
+footer li{
+    padding: 5px;
+}
+
+footer h5{
+    border-bottom: 1px solid black;
+}

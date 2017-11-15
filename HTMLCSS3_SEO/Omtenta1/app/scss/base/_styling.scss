@@ -1,40 +1,75 @@
-/*allmän styling*/
-html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  body{
-    display: block;
-    background: map-get($color, main);
-    text-align: center;
+a:link {
+    text-decoration: none;
+}
+
+.main{
+    background-color: map-get($color, main);
+}
+
+ul{
+    list-style: none;
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
   }
 
-  html,
-  header,
-  footer,
-  body,
-  div,
-  img,
-  a,
-  ul,
-  li,
-  h1,
-  h2 {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-  }
-  
-header h1{
-  background: map-get($color, dark);
-  color:  map-get($color, accent1);
-  padding-top: 5rem;
-  text-align: center;
+.top{
+    text-align: center;
+    color: map-get($color, bright);
+    border-bottom: 15px solid black;
+    margin: 5px;
+    margin-top: 40px;
+}
+
+.holiday{
+    color: map-get($color, bright);
+    text-align: center;
+    border: 1px solid black;
+    margin: 5px;
+    }
+
+.holiday h2{
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+.article-header{
+    text-align: center;
+}
+.article-header h1{
+    display: inline;
+}
+
+.article-body{
+    padding: 5px;
+}
+
+.article-body h4{
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.article-body a{
+    color: map-get($color, black);
+    text-align: center;
+}
+
+.community{
+    text-align: center;
+    padding: 5px;
+}
+
+.community h3{
+    margin: 2px;
+}
+
+.images{
+    margin-top: 20px;
+}
+
+.images img{
+    width: 49%;
+    height: auto;
 }

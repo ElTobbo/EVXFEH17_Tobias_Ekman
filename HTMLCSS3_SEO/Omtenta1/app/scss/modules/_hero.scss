@@ -1,15 +1,23 @@
-.hero{
-    padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/scotland.png");
+.bg-block{
+  padding: 0;
+  background-image: url("../images/rockies.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height:50vh;
+  border: 20px solid;
+  border-color: map-get($color, darkgrey);
+  margin: 5px;
 }
 
-.caption a{
-    color: map-get($color, bright);
+.hero-title{
+    color: map-get($color, black);
+    border-bottom: 2px solid;
+}
+
+.off{
+  color: map-get($color, bright);
+}
+
+.sale{
+  padding: 20px;
 }

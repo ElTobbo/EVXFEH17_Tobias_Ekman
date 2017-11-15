@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
@@ -394,194 +393,102 @@ template {
 [hidden] {
   display: none; }
 
-/*allmän styling*/
-html {
-  box-sizing: border-box; }
+a:link {
+  text-decoration: none; }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
+.main {
+  background-color: #1d8aaf; }
 
-body {
-  display: block;
-  background: #24d4a0;
+ul {
+  list-style: none; }
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2; }
+
+.top {
+  text-align: center;
+  color: white;
+  border-bottom: 15px solid black;
+  margin: 5px;
+  margin-top: 40px; }
+
+.holiday {
+  color: white;
+  text-align: center;
+  border: 1px solid black;
+  margin: 5px; }
+
+.holiday h2 {
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey; }
+
+.article-header {
   text-align: center; }
 
-html,
-header,
-footer,
-body,
-div,
-img,
-a,
-ul,
-li,
-h1,
-h2 {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none; }
+.article-header h1 {
+  display: inline; }
 
-header h1 {
-  background: #282828;
-  color: #ffd166;
-  padding-top: 5rem;
+.article-body {
+  padding: 5px; }
+
+.article-body h4 {
+  border: 2px solid black;
+  padding: 30px; }
+
+.article-body a {
+  color: black;
   text-align: center; }
 
-/*nav styles*/
-#nav {
-  background: #282828; }
+.community {
+  text-align: center;
+  padding: 5px; }
 
-#nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+.community h3 {
+  margin: 2px; }
 
-#nav a {
-  color: #f5f5f5; }
+.images {
+  margin-top: 20px; }
 
-@media (min-width: 40em) {
-  /*navigering för mobil*/
-  #nav {
-    transition: transform .3s ease-in-out;
-    top: 0;
-    bottom: 0;
-    min-height: 100vh;
-    /* override Safari bug */
-    position: fixed;
-    /* or choose `absolute` depending on desired behavior*/
-    width: 300px;
-    left: -340px;
-    /*lägg menyn utanför skärmen -340px*/ }
-  /*URL-adresser med en # följd av en ankare med namnlänk till ett visst element i ett dokument. Elementet som är länkas till är själva målelementet.
-  */
-  #nav:target {
-    transform: translateX(340px); }
-  .close {
-    text-align: right;
-    display: block;
-    text-decoration: none;
-    font-size: 3em;
-    position: relative;
-    top: -30px; } }
+.images img {
+  width: 49%;
+  height: auto; }
 
-/*desktopnavigation*/
-@media (min-width: 60em) {
-  /*display menu with flex*/
-  #nav ul {
-    display: flex;
-    justify-content: center; }
-  #nav ul li {
-    padding: 0 20px 0 0; }
-  .toggle {
-    display: none; } }
-
-.card {
-  background: #f5f5f5; }
-
-@supports (grid-area: auto) {
-  .card-image {
-    grid-area: img; }
-  .card-title {
-    grid-area: title; }
-  .card-content {
-    grid-area: content; }
-  .card {
-    max-width: 100%;
-    display: grid;
-    grid-column: 1fr 3fr;
-    grid-row: auto;
-    grid-column-gap: 1.5em;
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-    box-shadow: 10px 10px 5px #666;
-    grid-template-areas: "img title" "img content"; }
-  .card-content h1 {
-    font-size: 14px;
-    font-weight: 0; }
-  .card-content p {
-    font-size: 14px; }
-  .card-image {
-    width: 100%; } }
-
-.hero {
+.bg-block {
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/scotland.png");
+  background-image: url("../images/rockies.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh; }
+  border: 20px solid;
+  border-color: #333;
+  margin: 5px; }
 
-.caption a {
-  color: #f5f5f5; }
+.hero-title {
+  color: black;
+  border-bottom: 2px solid; }
+
+.off {
+  color: white; }
+
+.sale {
+  padding: 20px; }
 
 footer {
-  height: 10em;
-  margin-bottom: 0;
-  background-color: #282828;
-  color: #ffd166;
-  line-height: 10em; }
+  padding: 20px;
+  background-color: #eee;
+  color: black;
+  margin: 5px; }
 
-.sidebar {
-  background: #f5f5f5;
-  color: #282828; }
+footer li {
+  padding: 5px; }
 
-.main-content {
-  min-height: 100vh;
-  margin-bottom: 1em;
-  color: #666;
-  background: #282828; }
-
-.portfolio-item {
-  background-position: left top;
-  z-index: 10;
-  transition: .3s;
-  padding: 1em; }
-  .portfolio-item:hover {
-    color: #f5f5f5;
-    box-shadow: 10px 10px 5px #666; }
+footer h5 {
+  border-bottom: 1px solid black; }
 
 @supports (grid-area: auto) {
-  @media (min-width: 60em) {
-    .main-content {
-      height: 100%;
-      display: grid;
-      grid-column: repeat(5 1fr);
-      grid-row: repeat(8 1fr);
-      grid-gap: 20px;
-      grid-auto-flow: column dense; }
-    .portfolio-item .small {
-      grid-row-end: span 1;
-      grid-column-end: span 1; }
-    .portfolio-item .medium {
-      grid-row-end: span 2;
-      grid-column-end: span 2; }
-    .portfolio-item .tall {
-      grid-row-end: span 3;
-      grid-column-end: span 2; }
-    .portfolio-item .wide {
-      grid-row-end: span 2;
-      grid-column-end: span 3; }
-    .portfolio-item .wide {
-      grid-row-end: span 2;
-      grid-column-end: span 3; }
-    .portfolio-item .medium {
-      grid-row-end: span 1/3;
-      grid-column-end: span 1/3; }
-    .portfolio-item .large .with-image {
-      grid-row-end: span 3;
-      grid-column-end: span 3; }
-    .portfolio-item .medium {
-      grid-row-end: span 2;
-      grid-column-end: span 2; } } }
-
-@supports (grid-area: auto) {
-  @media (min-width: 60em) {
+  @media (min-width: 840px) {
     /*kompoeterma tilldelas grid-namn*/
     header {
       grid-area: head; }
@@ -599,7 +506,7 @@ footer {
       grid-template-areas: "head head head head" "hero hero hero hero" "main main main main" "footer footer footer footer"; } } }
 
 @supports (grid-area: auto) {
-  @media (min-width: 60em) {
+  @media (min-width: 840px) {
     .cards {
       grid-area: card; }
     .main-content {
