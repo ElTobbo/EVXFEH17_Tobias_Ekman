@@ -13,9 +13,13 @@
     color: map-get($color, black);
     border-bottom: 2px solid;
 }
+.all{
+  font-size: 3.2rem;
+}
 
 .off{
   color: map-get($color, bright);
+  font-size: 3.2rem;
 }
 
 .sale{

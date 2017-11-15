@@ -1,12 +1,14 @@
-}
 
 .community{
     text-align: center;
     padding: 5px;
 }
 
-.community h3{
+.glacier h2{
     margin: 2px;
+    font-size: 1.4rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .images{
@@ -14,17 +16,27 @@
 }
 
 .images img{
-    width: 20%;
+    width: 45%;
     height: auto;
 }
 
 @supports (grid-area: auto) {
     @include respond-to("medium"){
-
-        .images img{
-            width: 20%;
+            .images img{
+            width: 24%;
             height: auto;
         }   
 
     }
+    @include respond-to("large"){
+    .community{
+        display: flex;
+        flex-direction: row;
+    }
+    .images img{
+        width: 20%;
+        height: auto;
+    }
+    
+}
 }

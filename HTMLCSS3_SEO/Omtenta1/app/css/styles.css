@@ -394,26 +394,19 @@ template {
 [hidden] {
   display: none; }
 
-a:link {
-  text-decoration: none; }
-
-.main {
+body {
   background-color: #1d8aaf; }
 
-ul {
-  list-style: none; }
-
-ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2; }
+a:link {
+  text-decoration: none; }
 
 .top {
   text-align: center;
   color: white;
   border-bottom: 15px solid black;
   margin: 5px;
-  margin-top: 40px; }
+  margin-top: 40px;
+  font-size: 7.1vw; }
 
 .holiday {
   color: white;
@@ -423,38 +416,8 @@ ul {
 
 .holiday h2 {
   border-top: 2px solid grey;
-  border-bottom: 2px solid grey; }
-
-.article-header {
-  text-align: center; }
-
-.article-header h1 {
-  display: inline; }
-
-.article-body {
-  padding: 5px; }
-
-.article-body h4 {
-  border: 2px solid black;
-  padding: 30px; }
-
-.article-body a {
-  color: black;
-  text-align: center; }
-
-.community {
-  text-align: center;
-  padding: 5px; }
-
-.community h3 {
-  margin: 2px; }
-
-.images {
-  margin-top: 20px; }
-
-.images img {
-  width: 49%;
-  height: auto; }
+  border-bottom: 2px solid grey;
+  font-size: 5.5vw; }
 
 ul {
   list-style: none; }
@@ -471,7 +434,12 @@ ul {
     ul {
       columns: 4;
       -webkit-columns: 4;
-      -moz-columns: 4; } } }
+      -moz-columns: 4; } }
+  @media (min-width: 1200px) {
+    ul {
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1; } } }
 
 .bg-block {
   padding: 0;
@@ -487,8 +455,12 @@ ul {
   color: black;
   border-bottom: 2px solid; }
 
+.all {
+  font-size: 3.2rem; }
+
 .off {
-  color: white; }
+  color: white;
+  font-size: 3.2rem; }
 
 .sale {
   padding: 20px; }
@@ -522,6 +494,44 @@ footer h5 {
   color: black;
   text-align: center; }
 
+@media (min-width: 750px) {
+  .article-header h1 {
+    display: block; } }
+
+@media (min-width: 750px) {
+  .article-header h1 {
+    display: inline; } }
+
+.community {
+  text-align: center;
+  padding: 5px; }
+
+.glacier h2 {
+  margin: 2px;
+  font-size: 1.4rem;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+.images {
+  margin-top: 20px; }
+
+.images img {
+  width: 45%;
+  height: auto; }
+
+@supports (grid-area: auto) {
+  @media (min-width: 750px) {
+    .images img {
+      width: 24%;
+      height: auto; } }
+  @media (min-width: 840px) {
+    .community {
+      display: flex;
+      flex-direction: row; }
+    .images img {
+      width: 20%;
+      height: auto; } } }
+
 @supports (grid-area: auto) {
   @media (min-width: 750px) {
     /*kompoeterma tilldelas grid-namn*/
@@ -543,25 +553,25 @@ footer h5 {
       grid-template-rows: auto;
       grid-gap: 1rem;
       grid-template-areas: "hd hd hd hd hd" "ah ah ab ab ab" "bb bb bb bb bb" "cm cm cm cm cm" "ft ft ft ft ft"; }
-    /* Fler kolumner för medium*/
-    ul {
-      columns: 4;
-      -webkit-columns: 4;
-      -moz-columns: 4; } } }
-
-@supports (grid-area: auto) {
+    /* grid */ }
+  /*respond to medium stängs här*/
   @media (min-width: 840px) {
-    .cards {
-      grid-area: card; }
-    .main-content {
-      grid-area: mc; }
-    .sidebar {
-      grid-area: sb; }
-    #rubrik {
-      grid-area: h1; }
-    .main {
+    .grid {
       display: grid;
-      grid-template-columns: repeat 6 1fr;
+      grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
       grid-template-rows: auto;
-      grid-gap: 1rem;
-      grid-template-areas: ".. h1 ... ... sb ..."   ".. card card card sb .." ".. card card card sb .." ".. card card card sb .." ".. mc mc mc sb .."; } } }
+      grid-gap: 0;
+      grid-template-areas: "hd hd .. .. .. .. ..  ah ah ah"   "bb bb bb bb bb bb bb ab ab ab" "bb bb bb bb bb bb bb ab ab ab" "bb bb bb bb bb bb bb ab ab ab" "cm cm cm cm cm cm cm cm cm cm" "ft ft ft ft ft ft ft ft ft ft"; }
+    /* main */ }
+  /* respond to large stängs här*/
+  @media (min-width: 1200px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+      grid-template-rows: auto;
+      grid-gap: 0;
+      grid-template-areas: "hd hd hd .. .. .. .ah ah ah ah"   "bb bb bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft cm cm cm cm cm cm cm cm"; }
+    /* grid */ }
+  /* respond to wide stängs här*/ }
+
+/* support grids*/

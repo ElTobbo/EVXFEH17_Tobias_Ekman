@@ -22,5 +22,15 @@ ul {
     
 
     }
+    @include respond-to("wide"){
+        ul {
+            columns: 1;
+            -webkit-columns: 1;
+            -moz-columns: 1;
+          }
+          
+    }
+
 }
+
 

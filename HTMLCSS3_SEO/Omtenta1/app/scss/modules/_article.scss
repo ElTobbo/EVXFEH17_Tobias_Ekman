@@ -18,3 +18,17 @@
     color: map-get($color, black);
     text-align: center;
 }
+
+@include respond-to("medium"){
+    .article-header h1{
+        display: block;
+}
+
+}
+
+@include respond-to("medium"){
+    .article-header h1{
+        display: inline;
+}
+
+}
