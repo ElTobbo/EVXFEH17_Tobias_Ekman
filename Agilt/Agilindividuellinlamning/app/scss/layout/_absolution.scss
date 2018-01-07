@@ -1,0 +1,30 @@
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo img{
+    max-width: 15%;
+    max-height: 15%;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.headline{
+    font-weight: bolder;
+}
+
+.confess{
+    background-color: map-get($color, gray);
+    opacity: 0.8;
+    border-radius: 10%;
+}
+
+.pay{
+    background-color: map-get($color, gray);
+    opacity: 0.8;
+    border-radius: 10%;
+}

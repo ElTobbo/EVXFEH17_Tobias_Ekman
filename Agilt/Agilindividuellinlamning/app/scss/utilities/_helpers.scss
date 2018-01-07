@@ -1,0 +1,32 @@
+//Placeholders and classes: ;
+
+///Button placeholder
+%btn{
+	width: 200px;
+  height: 200px;
+	border-radius: 50%;
+	color:white;
+ text-decoration:none;
+ text-align: center;
+ padding:5%;
+ margin: 10px;	
+ font-family: 'Josefin sans', bold;
+ font-size:2.5em;
+ line-height: 150px;
+}
+
+@include respond-to('medium') {
+  
+    width: 50%;
+  
+}
+@include respond-to('large') {
+  
+    width: 33.33%;
+		
+		img{
+			object-fit: cover;
+  		width: 100%;
+  		height: 150px;
+		}
+  }
