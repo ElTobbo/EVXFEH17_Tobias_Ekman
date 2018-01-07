@@ -534,7 +534,7 @@ footer h5 {
 
 @supports (grid-area: auto) {
   @media (min-width: 750px) {
-    /*kompoeterma tilldelas grid-namn*/
+    /*komponenterna tilldelas grid-namn*/
     .holiday {
       grid-area: hd; }
     .article-header {
@@ -570,8 +570,9 @@ footer h5 {
       grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
       grid-template-rows: auto;
       grid-gap: 0;
-      grid-template-areas: "hd hd hd .. .. .. .ah ah ah ah"   "bb bb bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft cm cm cm cm cm cm cm cm"; }
+      grid-template-areas: "hd hd hd .. .. .. ah ah ah ah"   "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft bb bb bb bb bb ab ab ab" "ft ft cm cm cm cm cm cm cm cm"; }
     /* grid */ }
   /* respond to wide stängs här*/ }
 
 /* support grids*/
+/*@import 'main';*/
